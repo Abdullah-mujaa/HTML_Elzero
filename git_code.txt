@@ -1,0 +1,1781 @@
+lesson 03: We have made repo and clone it(make copy of it in the pc) by command line and the link we took is the http not ssh.(
+λ mkdir My-Github
+
+C:\Users\ABDI\Downloads
+λ cd My-Github
+
+C:\Users\ABDI\Downloads\My-Github
+λ git clone https://github.com/Abdullah-mujaa/Git_course.git
+Cloning into 'Git_course'...
+)
+--Lesson-04--
+C:\Users\ABDI\Downloads\My-Github\Git_course (main -> origin)
+λ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        css/
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\ABDI\Downloads\My-Github\Git_course (main -> origin)
+λ git add css\
+
+C:\Users\ABDI\Downloads\My-Github\Git_course (main -> origin)
+λ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   css/main.css
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+
+C:\Users\ABDI\Downloads\My-Github\Git_course (main -> origin)
+λ git add css
+
+C:\Users\ABDI\Downloads\My-Github\Git_course (main -> origin)
+λ git add css\main.css index.html
+
+C:\Users\ABDI\Downloads\My-Github\Git_course (main -> origin)
+λ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   css/main.css
+        new file:   index.html
+
+
+C:\Users\ABDI\Downloads\My-Github\Git_course (main -> origin)
+λ git add *
+
+C:\Users\ABDI\Downloads\My-Github\Git_course (main -> origin)
+λ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   by_mistake.txt
+        new file:   css/main.css
+        new file:   index.html
+
+
+C:\Users\ABDI\Downloads\My-Github\Git_course (main -> origin)
+λ git reset by_mistake.txt
+
+C:\Users\ABDI\Downloads\My-Github\Git_course (main -> origin)
+λ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   css/main.css
+        new file:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        by_mistake.txt
+C:\Users\ABDI\Downloads\My-Github\Git_course (main -> origin)
+λ git commit -m "Created the main project structure"
+[main 33a0253] Created the main project structure
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 css/main.css
+ create mode 100644 index.html
+
+C:\Users\ABDI\Downloads\My-Github\Git_course (main -> origin)
+λ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        by_mistake.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\ABDI\Downloads\My-Github\Git_course (main -> origin)
+λ git add by_mistake.txt
+
+C:\Users\ABDI\Downloads\My-Github\Git_course (main -> origin)
+λ git commit "Added by_mistake.txt"
+error: pathspec 'Added by_mistake.txt' did not match any file(s) known to git
+
+C:\Users\ABDI\Downloads\My-Github\Git_course (main -> origin)
+λ git commit -m "Added by_mistake.txt"
+[main b627997] Added by_mistake.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 by_mistake.txt
+
+C:\Users\ABDI\Downloads\My-Github\Git_course (main -> origin)
+λ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+----------lesson 05----------------
+C:\Users\ABDI\Downloads\My-Github2\Git_try (main -> origin)
+λ git branch
+* main
+
+C:\Users\ABDI\Downloads\My-Github2\Git_try (main -> origin)
+λ git remote -v
+origin  git@github.com:Abdullah-mujaa/Git_try.git (fetch)
+origin  git@github.com:Abdullah-mujaa/Git_try.git (push)
+
+C:\Users\ABDI\Downloads\My-Github2\Git_try (main -> origin)
+λ git push origin main
+Enter passphrase for key '/c/Users/ABDI/.ssh/id_rsa':
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 618 bytes | 25.00 KiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:Abdullah-mujaa/Git_try.git
+   2ee1d68..e54a2f5  main -> main
+
+C:\Users\ABDI\Downloads\My-Github2\Git_try (main -> origin)
+λ git st
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   css/main.css
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\ABDI\Downloads\My-Github2\Git_try (main -> origin)
+λ git add css\main.css
+
+C:\Users\ABDI\Downloads\My-Github2\Git_try (main -> origin)
+λ git commit -m "i modified the css file"
+[main fdd3fa5] i modified the css file
+ 1 file changed, 1 insertion(+)
+
+C:\Users\ABDI\Downloads\My-Github2\Git_try (main -> origin)
+λ git push origin main
+Enter passphrase for key '/c/Users/ABDI/.ssh/id_rsa':
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 358 bytes | 71.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Abdullah-mujaa/Git_try.git
+   e54a2f5..fdd3fa5  main -> main
+\My-Github\Git_course (main -> origin)
+λ git commit -m "Modified the css file"
+[main 68f2612] Modified the css file
+ 1 file changed, 3 insertions(+)
+==Lesson 06===
+is all theory 
+==Lesson 07===                                                                                                                    
+C:\Users\ABDI\Downloads\My-Github\Git_course (main -> origin)                                                        
+λ git config -l                                                                                                      
+diff.astextplain.textconv=astextplain                                                                                
+filter.lfs.clean=git-lfs clean -- %f                                                                                 
+filter.lfs.smudge=git-lfs smudge -- %f                                                                               
+filter.lfs.process=git-lfs filter-process                                                                            
+filter.lfs.required=true                                                                                             
+http.sslbackend=openssl                                                                                              
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt                                              
+core.autocrlf=true                                                                                                   
+core.fscache=true                                                                                                    
+core.symlinks=false                                                                                                  
+pull.rebase=false                                                                                                    
+credential.helper=manager                                                                                            
+credential.https://dev.azure.com.usehttppath=true                                                                    
+init.defaultbranch=master                                                                                            
+core.editor="C:\Users\ABDI\AppData\Local\Programs\Microsoft VS Code\bin\code" --wait                                 
+user.name=Abdullah_mujaa                                                                                             
+user.email=abdullahmohammedredi@gmail.com                                                                            
+                                                                                                                     
+credential.helperselector.selected=manager                                                                           
+core.repositoryformatversion=0                                                                                       
+core.filemode=false                                                                                                  
+core.bare=false                                                                                                      
+core.logallrefupdates=true                                                                                           
+core.symlinks=false                                                                                                  
+core.ignorecase=true                                                                                                 
+remote.origin.url=https://github.com/Abdullah-mujaa/Git_course.git                                                   
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*                                                              
+branch.main.remote=origin                                                                                            
+branch.main.merge=refs/heads/main                                                                                    
+                                                                                                                     
+C:\Users\ABDI\Downloads\My-Github\Git_course (main -> origin)                                                        
+λ git help config                                                                                                    
+                                                                                                                     
+C:\Users\ABDI\Downloads\My-Github\Git_course (main -> origin)                                                        
+λ git config --global user.email                                                                                     
+abdullahmohammedredi@gmail.com                                                                                       
+                                                                                                                     
+                                                                                                                     
+C:\Users\ABDI\Downloads\My-Github\Git_course (main -> origin)                                                        
+λ git config --global user.email "abdullahmohammedredi@gmail.com"                                                    
+                                                                                                                     
+C:\Users\ABDI\Downloads\My-Github\Git_course (main -> origin)                                                        
+λ git config -l --show-origin                                                                                        
+file:C:/Program Files/Git/etc/gitconfig diff.astextplain.textconv=astextplain                                        
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.clean=git-lfs clean -- %f                                         
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.smudge=git-lfs smudge -- %f                                       
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.process=git-lfs filter-process                                    
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.required=true                                                     
+file:C:/Program Files/Git/etc/gitconfig http.sslbackend=openssl                                                      
+file:C:/Program Files/Git/etc/gitconfig http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt      
+file:C:/Program Files/Git/etc/gitconfig core.autocrlf=true                                                           
+file:C:/Program Files/Git/etc/gitconfig core.fscache=true                                                            
+file:C:/Program Files/Git/etc/gitconfig core.symlinks=false                                                          
+file:C:/Program Files/Git/etc/gitconfig pull.rebase=false                                                            
+file:C:/Program Files/Git/etc/gitconfig credential.helper=manager                                                    
+file:C:/Program Files/Git/etc/gitconfig credential.https://dev.azure.com.usehttppath=true                            
+file:C:/Program Files/Git/etc/gitconfig init.defaultbranch=master                                                    
+file:C:/Users/ABDI/.gitconfig   core.editor="C:\Users\ABDI\AppData\Local\Programs\Microsoft VS Code\bin\code" --wait 
+file:C:/Users/ABDI/.gitconfig   user.name=Abdullah_mujaa                                                             
+file:C:/Users/ABDI/.gitconfig   user.email=abdullahmohammedredi@gmail.com                                            
+file:C:/Users/ABDI/.gitconfig   credential.helperselector.selected=manager                                           
+file:.git/config        core.repositoryformatversion=0                                                               
+file:.git/config        core.filemode=false                                                                          
+file:.git/config        core.bare=false                                                                              
+file:.git/config        core.logallrefupdates=true                                                                   
+file:.git/config        core.symlinks=false                                                                          
+file:.git/config        core.ignorecase=true                                                                         
+file:.git/config        remote.origin.url=https://github.com/Abdullah-mujaa/Git_course.git                           
+file:.git/config        remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*                                      
+file:.git/config        branch.main.remote=origin                                                                    
+file:.git/config        branch.main.merge=refs/heads/main                                                            
+                                                                                                                     
+C:\Users\ABDI\Downloads\My-Github\Git_course (main -> origin)                                                        
+λ git config --global --edit                                                                                         
+hint: Waiting for your editor to close the file... 
+to change the color in the editor: 
+[color "status"]
+ added = yellow
+ changed = red bold
+ untracked = magenta bold
+[color "branch"]
+ remote = yellow
+===lesson-08===
+C:\Users\ABDI\Downloads\My-Github\Git_course (main -> origin)
+λ ssh-keygen -t rsa -b 4096 -C "MMuja@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (C:\Users\ABDI/.ssh/id_rsa):
+Created directory 'C:\Users\ABDI/.ssh'.
+Enter passphrase (empty for no passphrase): (nothing will appear it is top secured)
+Enter same passphrase again:
+Your identification has been saved in C:\Users\ABDI/.ssh/id_rsa.
+Your public key has been saved in C:\Users\ABDI/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:XbVfYDC6wOt46eLGdxq9L2ywRQTm76liwSQuRPaO9xw MMuja@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|        o.  o.+  |
+|  o    +  .. + o |
+| o .    +.. . . .|
+|  . o .  =.o   ..|
+| . + +  S.+     .|
+|  o + Eo.+..     |
+|   o +.o==+      |
+|      Oooo=.     |
+|     +.+++.o.    |
++----[SHA256]-----+
+
+C:\Users\ABDI\Downloads\My-Github\Git_course (main -> origin)
+λ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDCP5t63F6oC4z9rAvu/0zUJSnWOwnrjdeoSlwBGN2F2fiRSmpOB5r0Ur8/9CMdPwphbHxQszj51V9+qhxTWtH53sgTgjR7ch9UMFgwp+AgQNQTVNlJQYdn4a9w1ldVCyFl8nzX7nZO99qnSAkcvSwUQGNK97XzTcaoGzcOxEsVCJic6aS/k3kVzODxfLFSf2qP4G1Bg1JFFdI16Wa4iNloq0FILHRLftS9UHbY7HCQtLY7z3lGgQRJJUenWpU2w1KERwTEj2tCtfNq00l5NkOcrRSeRDCUl73wGGbMZqsZZ6zGNvePResy+rZqqnUz+35TvNFEqF8ehp4hKf0rSm8hw9MLIwrfawbhRIllDWiJwrwQX5f4Ns1Ux21zxjU4bzm2d2GB+O54NNc8eQRUERSUmrfGYIreWeqpZe1QuRcDcxGWFRpls1/vFHbIClAQ7TD8y7s+IHCrW89tLUqOjOvdr0vZq0MnbUw2FYCRmDRgvyM6CTOtl4ncYVEvGgIeYogd8fGADW+jRpGiiaRcUzzF5GS807i7j9WAyc5eJXNX8BDOW/AZ1jauDSonSM/RkB6tJFMEcltz1gqqghwVggYburi5FMhI13vq5d9AbrBooPboPlA6E2bNfMoFzuP4w1uB3SQTjDCJERhKo4xpuKCqUuDGTIJ1YzuJIQuT8p9Hfw== MMuja@gmail.com
+C:\Users\ABDI\Downloads\My-Github\Git_course (main -> origin)
+λ ssh -T git@github.com
+The authenticity of host 'github.com (140.82.121.4)' can't be established.
+ECDSA key fingerprint is SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com,140.82.121.4' (ECDSA) to the list of known hosts.
+Enter passphrase for key 'C:\Users\ABDI/.ssh/id_rsa':(in here i entered the pass then enter )
+Hi Abdullah-mujaa! You've successfully authenticated, but GitHub does not provide shell access.[by these i am connected to git hub and without username & password]**
+==Lesson-09===
+
+C:\Users\ABDI\Downloads\My-Github\Git_course (main -> origin)
+λ cd \users\abdi\Documents\
+
+C:\Users\ABDI\Documents
+λ md repos
+
+C:\Users\ABDI\Documents
+λ cd repos\
+
+C:\Users\ABDI\Documents\repos
+λ git init
+Initialized empty Git repository in C:/Users/ABDI/Documents/repos/.git/
+
+C:\Users\ABDI\Documents\repos (master)
+λ touch index.html
+
+C:\Users\ABDI\Documents\repos (master)
+λ git add index.html
+
+C:\Users\ABDI\Documents\repos (master)
+λ git commit -m "Created the main file
+[master (root-commit) cdb6ce1] Created the main file
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+C:\Users\ABDI\Documents\repos (master)
+λ git remote add origin  git@github.com:Abdullah-mujaa/Course.git
+
+C:\Users\ABDI\Documents\repos (master)
+λ git push -u origin master
+Enter passphrase for key '/c/Users/ABDI/.ssh/id_rsa':
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 227 bytes | 25.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0To github.com:Abdullah-mujaa/Course.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.                               
+======Lesson-10=========
+It is theory 
+=======Lesson-11======
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git config --global alias.st status
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git branch
+* master
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git config --global alias.br branch
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git br
+* master
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git config --global alia.cm "commit -m"
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ touch osama.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        osama.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git add *
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git cm "We add Osama.txt"
+[master 52e9711] We add Osama.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 osama.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git config --edit
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git config --global --edit
+======Lesson-11====
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git config --global alias.st status
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git branch
+* master
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git config --global alias.br branch
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git br
+* master
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git config --global alia.cm "commit -m"
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ touch osama.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        osama.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git add *
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git cm "We add Osama.txt"
+[master 52e9711] We add Osama.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 osama.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git config --edit
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git config --global --edit
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git config --global alias.rem remote
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git config --global alias.or origin
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git config --global --edit
+=====Lesson-12=====
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git br
+* master
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git br scroll
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git br
+* master
+  scroll
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git checkout scroll
+Switched to branch 'scroll'
+
+C:\Users\ABDI\Documents\repositories (scroll)
+λ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git branch -d scroll
+Deleted branch scroll (was 52e9711).
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git checkout -b Dev-Feature
+Switched to a new branch 'Dev-Feature'
+
+C:\Users\ABDI\Documents\repositories (Dev-Feature)
+λ git branch -m Development
+
+C:\Users\ABDI\Documents\repositories (Development)
+λ touch x.html
+
+C:\Users\ABDI\Documents\repositories (Development)
+λ git add x.html
+
+C:\Users\ABDI\Documents\repositories (Development)
+λ git cm "whatever"
+[Development 46ee9eb] whatever
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 x.html
+
+C:\Users\ABDI\Documents\repositories (Development)
+λ git config --global alias.ck checkout
+
+C:\Users\ABDI\Documents\repositories (Development)
+λ git ck master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git merge Development
+Updating 52e9711..46ee9eb
+Fast-forward
+ x.html | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 x.html
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git br -d Development
+Deleted branch Development (was 46ee9eb).
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git push or master
+fatal: 'or' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git po master
+Enter passphrase for key '/c/Users/ABDI/.ssh/id_rsa':
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 259 bytes | 43.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Abdullah-mujaa/Course_try.git
+   52e9711..46ee9eb  master -> master
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git ck scr
+error: pathspec 'scr' did not match any file(s) known to git
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git ck scroll
+error: pathspec 'scroll' did not match any file(s) known to git
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git ck -b scroll
+Switched to a new branch 'scroll'
+
+C:\Users\ABDI\Documents\repositories (scroll)
+λ touch main.js
+
+C:\Users\ABDI\Documents\repositories (scroll)
+λ git add main.js
+
+C:\Users\ABDI\Documents\repositories (scroll)
+λ git cm "new Ex"
+[scroll 20619aa] new Ex
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 main.js
+
+C:\Users\ABDI\Documents\repositories (scroll)
+λ git ck master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git br -d scroll
+error: The branch 'scroll' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D scroll'.
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git branch -D scroll
+Deleted branch scroll (was 20619aa).
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git br
+* master
+C:\Users\ABDI\Documents\repositories (Scroll)
+λ touch Scroll.css
+
+C:\Users\ABDI\Documents\repositories (Scroll)
+λ git add Scroll.css
+
+C:\Users\ABDI\Documents\repositories (Scroll)
+λ git cm "sCROLL"
+[Scroll 502b1cc] sCROLL
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Scroll.css
+
+C:\Users\ABDI\Documents\repositories (Scroll)
+λ git po Scroll
+Enter passphrase for key '/c/Users/ABDI/.ssh/id_rsa':
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 457 bytes | 41.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+remote:
+remote: Create a pull request for 'Scroll' on GitHub by visiting:
+remote:      https://github.com/Abdullah-mujaa/Course_try/pull/new/Scroll
+remote:
+To github.com:Abdullah-mujaa/Course_try.git
+ * [new branch]      Scroll -> Scroll
+***********the rest step is made in the github.com
+-----lesson 13---------------                               
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ echo "Hello World" > about_readme.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+        about_readme.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git add *
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   README.md
+        new file:   about_readme.txt
+
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash
+Saved working directory and index state WIP on master: 46ee9eb whatever
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ ls
+index.html  osama.txt  x.html
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ touch main.js
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git add *
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git cm "Added the main js file"
+[master 41c7c16] Added the main js file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 main.js
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git po master
+Enter passphrase for key '/c/Users/ABDI/.ssh/id_rsa':
+To github.com:Abdullah-mujaa/Course_try.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'github.com:Abdullah-mujaa/Course_try.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git push -u origin master
+Enter passphrase for key '/c/Users/ABDI/.ssh/id_rsa':
+To github.com:Abdullah-mujaa/Course_try.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'github.com:Abdullah-mujaa/Course_try.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git pull origin master
+Enter passphrase for key '/c/Users/ABDI/.ssh/id_rsa':
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 624 bytes | 29.00 KiB/s, done.
+From github.com:Abdullah-mujaa/Course_try
+ * branch            master     -> FETCH_HEAD
+   46ee9eb..cd6e36a  master     -> origin/master
+Merge made by the 'ort' strategy.
+ Scroll.css | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Scroll.css
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git po master
+Enter passphrase for key '/c/Users/ABDI/.ssh/id_rsa':
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 469 bytes | 78.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Abdullah-mujaa/Course_try.git
+   cd6e36a..a8d8207  master -> master
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash pop
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   README.md
+        new file:   about_readme.txt
+
+Dropped refs/stash@{0} (03b9665ba3592d09f19b71dfdacab03489b47133)
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash list
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git cm "Added files from stash"
+[master e46300c] Added files from stash
+ 2 files changed, 1 insertion(+)
+ create mode 100644 README.md
+ create mode 100644 about_readme.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git po master
+Enter passphrase for key '/c/Users/ABDI/.ssh/id_rsa':
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 323 bytes | 80.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Abdullah-mujaa/Course_try.git
+   a8d8207..e46300c  master -> master
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+=======Lesson-14=============
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ touch a.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git add *
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   a.txt
+
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash
+Saved working directory and index state WIP on master: e46300c Added files from stash
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash list
+stash@{0}: WIP on master: e46300c Added files from stash
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ touch b.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git add b.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   b.txt
+
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash
+Saved working directory and index state WIP on master: e46300c Added files from stash
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash list
+stash@{0}: WIP on master: e46300c Added files from stash
+stash@{1}: WIP on master: e46300c Added files from stash
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ touch c.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git c.txt
+git: 'c.txt' is not a git command. See 'git --help'.
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git add c.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   c.txt
+
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash save "C file"
+Saved working directory and index state On master: C file
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ gti stash list
+'gti' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash list
+stash@{0}: On master: C file
+stash@{1}: WIP on master: e46300c Added files from stash
+stash@{2}: WIP on master: e46300c Added files from stash
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash pop
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   c.txt
+
+Dropped refs/stash@{0} (8bb153cbd72a300b5e2d2f7e95448bac13257fcf)
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash list
+stash@{0}: WIP on master: e46300c Added files from stash
+stash@{1}: WIP on master: e46300c Added files from stash
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash save "C file"
+Saved working directory and index state On master: C file
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash list
+stash@{0}: On master: C file
+stash@{1}: WIP on master: e46300c Added files from stash
+stash@{2}: WIP on master: e46300c Added files from stash
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash apply
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   c.txt
+
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash list
+stash@{0}: On master: C file
+stash@{1}: WIP on master: e46300c Added files from stash
+stash@{2}: WIP on master: e46300c Added files from stash
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git cm "C Test"
+[master 4e6d585] C Test
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 c.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git po master
+Enter passphrase for key '/c/Users/ABDI/.ssh/id_rsa':
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 239 bytes | 59.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Abdullah-mujaa/Course_try.git
+   e46300c..4e6d585  master -> master
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash list
+stash@{0}: On master: C file
+stash@{1}: WIP on master: e46300c Added files from stash
+stash@{2}: WIP on master: e46300c Added files from stash
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash pop stash@(2}
+error: stash@(2} is not a valid reference
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ  git stash pop stash@{2}
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   a.txt
+
+Dropped stash@{2} (6bc7bc146aab79f565d06513836a348c0d047a54)
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ gti st
+'gti' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   a.txt
+
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash list
+stash@{0}: On master: C file
+stash@{1}: WIP on master: e46300c Added files from stash
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git add a.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git cm "A file"
+[master 0197087] A file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git po master
+Enter passphrase for key '/c/Users/ABDI/.ssh/id_rsa':
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 230 bytes | 57.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Abdullah-mujaa/Course_try.git
+   4e6d585..0197087  master -> master
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash list
+stash@{0}: On master: C file
+stash@{1}: WIP on master: e46300c Added files from stash
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash drop
+Dropped refs/stash@{0} (f8d361c46e067b0063304ab81ccc82f98fba0131)
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash list
+stash@{0}: WIP on master: e46300c Added files from stash
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ touch c.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git add c.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash save "C file"
+No local changes to save
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash list
+stash@{0}: WIP on master: e46300c Added files from stash
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ touch c.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git add c.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ touch d.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git add d.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   d.txt
+
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash save "D file"
+Saved working directory and index state On master: D file
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash list
+stash@{0}: On master: D file
+stash@{1}: WIP on master: e46300c Added files from stash
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash drop stash@{1}
+Dropped stash@{1} (7070509a450cb8ed443768d199505b02f3d5e3d0)
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash list
+stash@{0}: On master: D file
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash show
+ d.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ touch elz.doc
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git add elz.doc
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ gti stash
+'gti' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash list
+stash@{0}: On master: D file
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash
+Saved working directory and index state WIP on master: 0197087 A file
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash list
+stash@{0}: WIP on master: 0197087 A file
+stash@{1}: On master: D file
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash show stash@{0}
+ elz.doc | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash list
+stash@{0}: WIP on master: 0197087 A file
+stash@{1}: On master: D file
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash clear
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git stash list
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ
+=======Lesson-15=============
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ touch new.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git add new.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   new.txt
+
+The most similar command is
+        restore
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git restore --staged new.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        new.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ code new.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   new.txt
+
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        new.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ touch new2.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ  git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        new.txt
+        new2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   new.txt
+        new file:   new2.txt
+
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git restore --staged *
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        new.txt
+        new2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git clean -n
+Would remove new.txt
+Would remove new2.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ touch new3.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git clean -n
+Would remove new.txt
+Would remove new2.txt
+Would remove new3.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git add new2.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git clean -n
+Would remove new.txt
+Would remove new3.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git clean -f
+Removing new.txt
+Removing new3.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   new2.txt
+
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+========Lesson-16========
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ touch good.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git add good.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git cm "the good commit"
+[master 9d8a782] the good commit
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 good.txt
+ create mode 100644 new2.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git po master
+Enter passphrase for key '/c/Users/ABDI/.ssh/id_rsa':
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 249 bytes | 62.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Abdullah-mujaa/Course_try.git
+   0197087..9d8a782  master -> master
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ touch bad.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git add bad.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git cm "the bad commit"
+[master 57b17f5] the bad commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 bad.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git po master
+Enter passphrase for key '/c/Users/ABDI/.ssh/id_rsa':
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 243 bytes | 60.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Abdullah-mujaa/Course_try.git
+   9d8a782..57b17f5  master -> master
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git log
+commit 57b17f51c2b574fc83a3e8928fe5f0693228cc4f (HEAD -> master, origin/master)
+Author: Abdullah_mujaa <abdullahmohammedredi@gmail.com>
+Date:   Mon May 1 07:58:23 2023 +0300
+
+    the bad commit
+
+commit 9d8a78267d65abc978e5e8238bf2edd7584151b5
+Author: Abdullah_mujaa <abdullahmohammedredi@gmail.com>
+Date:   Mon May 1 07:57:07 2023 +0300
+
+    the good commit
+
+commit 01970870ad595fffa64d4b5ae37b5f615e96ff89
+Author: Abdullah_mujaa <abdullahmohammedredi@gmail.com>
+Date:   Sun Apr 30 19:46:06 2023 +0300
+
+    A file
+
+commit 4e6d5855ffb97b9a8c5122206d142c17b6b893a4
+Author: Abdullah_mujaa <abdullahmohammedredi@gmail.com>
+Date:   Sun Apr 30 19:32:38 2023 +0300
+
+    C Test
+
+commit e46300c63f9c4121dee4bd93770bd88253886e77
+Author: Abdullah_mujaa <abdullahmohammedredi@gmail.com>
+Date:   Sun Apr 30 11:27:50 2023 +0300
+
+    Added files from stash
+
+commit a8d82078cbf2d4e1122fb6d8e7e07d877b794ac1
+Merge: 41c7c16 cd6e36a
+Author: Abdullah_mujaa <abdullahmohammedredi@gmail.com>
+Date:   Sun Apr 30 11:21:52 2023 +0300
+
+    Merge branch 'master' of github.com:Abdullah-mujaa/Course_try
+
+commit 41c7c16436c8e132b40ea582fb3baf68242a644c
+Author: Abdullah_mujaa <abdullahmohammedredi@gmail.com>
+Date:   Sun Apr 30 11:19:33 2023 +0300
+
+    Added the main js file
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git reset --hard 9d8a78267d65abc978e5e8238bf2edd7584151b5
+HEAD is now at 9d8a782 the good commit
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git po master --force
+Enter passphrase for key '/c/Users/ABDI/.ssh/id_rsa':
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Abdullah-mujaa/Course_try.git
+ + 57b17f5...9d8a782 master -> master (forced update)
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ touch .gitignore
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+=====Lesson-17=========
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ code .gitignore
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ touch osama.log
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ touch osama.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git usama.text
+git: 'usama.text' is not a git command. See 'git --help'.
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ touch usama.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        usama.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ touch vip.log
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        usama.txt
+        vip.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ md node_packs
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ ls
+about_readme.txt  index.html  main.js  node_packs/  osama.log  osama.txt  README.md  Scroll.css  usama.txt  vip.log  x.html
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        usama.txt
+        vip.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ cd node_packs\
+
+C:\Users\ABDI\Documents\repositories\node_packs (master -> origin)
+λ touch package1.js
+
+C:\Users\ABDI\Documents\repositories\node_packs (master -> origin)
+λ cd ..
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ ls
+about_readme.txt  index.html  main.js  node_packs/  osama.log  osama.txt  README.md  Scroll.css  usama.txt  vip.log  x.html
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        node_packs/
+        usama.txt
+        vip.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        usama.txt
+        vip.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ touch text.doc
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        usama.txt
+        vip.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ touch one1.text
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        text.doc
+        usama.txt
+        vip.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git add text.doc
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git one1.text
+git: 'one1.text' is not a git command. See 'git --help'.
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git add one1.text
+The following paths are ignored by one of your .gitignore files:
+one1.text
+hint: Use -f if you really want to add them.
+hint: Turn this message off by running
+hint: "git config advice.addIgnoredFile false"
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git add -f one1.text
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   one1.text
+        new file:   text.doc
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        usama.txt
+        vip.log
+Then osama did push the .gitignore to the origin(master)
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ
+=======Lesson-18===========
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ touch first.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        first.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git add first.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git cm "Message from commit"
+[master 52dd886] Message from commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 first.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git po master
+Enter passphrase for key '/c/Users/ABDI/.ssh/id_rsa':
+Enter passphrase for key '/c/Users/ABDI/.ssh/id_rsa':
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 249 bytes | 62.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Abdullah-mujaa/Course_try.git
+   7f38c21..52dd886  master -> master
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git tag
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git tag v1.0
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git tag
+v1.0
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git po master v1.0
+Enter passphrase for key '/c/Users/ABDI/.ssh/id_rsa':
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Abdullah-mujaa/Course_try.git
+ * [new tag]         v1.0 -> v1.0
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ touch new_feature.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git add new_feature.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git cm "New Version"
+[master 1a0b544] New Version
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new_feature.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git po master
+Enter passphrase for key '/c/Users/ABDI/.ssh/id_rsa':
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 253 bytes | 36.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Abdullah-mujaa/Course_try.git
+   52dd886..1a0b544  master -> master
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git tag -a v2.0 -m "Our Project => Second Version"
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git po master v2.0
+Enter passphrase for key '/c/Users/ABDI/.ssh/id_rsa':
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 187 bytes | 37.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Abdullah-mujaa/Course_try.git
+ * [new tag]         v2.0 -> v2.0
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ touch new.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git add new.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git cm "Added new feature"
+[master 69ee1b4] Added new feature
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new.txt
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git po master
+Enter passphrase for key '/c/Users/ABDI/.ssh/id_rsa':
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 243 bytes | 48.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Abdullah-mujaa/Course_try.git
+   1a0b544..69ee1b4  master -> master
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ touc new.css
+'touc' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ touch new.css
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git add new.css
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git cm " Added new feature"
+[master 9e5f6db]  Added new feature
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new.css
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git po master
+Enter passphrase for key '/c/Users/ABDI/.ssh/id_rsa':
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 250 bytes | 41.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Abdullah-mujaa/Course_try.git
+   69ee1b4..9e5f6db  master -> master
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git tag -l "v1.*"
+v1.0
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git tag -d v2.-
+error: tag 'v2.-' not found.
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git tag -d v2.0
+Deleted tag 'v2.0' (was 7a92786)
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git tag -d v1.0
+Deleted tag 'v1.0' (was 52dd886)
+
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ git po --delete v2.0
+Enter passphrase for key '/c/Users/ABDI/.ssh/id_rsa':
+To github.com:Abdullah-mujaa/Course_try.git
+ - [deleted]         v2.0

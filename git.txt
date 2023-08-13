@@ -1,0 +1,184 @@
+-------Introduction-02----
+Repository(repo): mustewda3, if we have two project eg. creating a mobile app, designing the web
+branch: from a repository eg. if we want to add a cursor to the web
+Local repo is your pc , remote repo is like the github,gitlab,bitbucket these one is common for all of us
+Commit(snapshot or checkpoint in your local repo)
+Clone (from local or remote): is like copy and paste
+push => literally upload local change to remote and pull is the opposite: remote change to the local repo 
+Pull request => tell other(eg. admin) about your changes to pull it from local (yours) to remote. i.e if there is a mistake they may reject and....
+The Readme is a markdown(md): it have its own syntax to write with for more :https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+git status : to know the status literally
+git add index.html: to add these file to the stageing area(mekan altegehez)(/git add *)[we are by this transfering the file from our working directory(almaaruf)to staging area)
+git reset index.html: to remove it.
+git commit -m "Created the main project structure".On these part we write like a description[we are by this transfering the file from staging area to the local repo(all the three areas are on your computer) ,m is 4 message ]
+git branch => these will display the available branchs
+git remote -v => this will display the remote
+git push RemoteName BranchName => git push origin main[we are by this transfering the file from the local repo(through a branch) to remote(github or git lab or any other server)
+The above action will require login or permisson to add your work to the repo
+there is always initial commit when creating a new repo
+lesson 06 was theory => if you create a file in a project you don't have access a fork (just like the same repo) will be created to place your changes and through a branch from this fork you can request your changesu
+--to add collaborators(they will no more need fork) go to setting>collaborators.
+Add a collaborator to Git_course => in the setting of the repo to add people.
+git pull origin[Remotename] [git pull=git fetch + git merge] , [by this we add the new change(fetch) in the remote repo and merge(add to the existing) it with the local (8:00.#06) => the working directory will be exactly the same as the remote(the word file changed its content)
+git config -l => to list the config informations, you can change the info globally or 3la mustewa al repo
+git help config => this will take you to a page you see all you need (git config is unusual)
+There are two ways to edit: cmd or editor(VSC)
+git config --global user.email
+=> the above line is to show the user-email in config
+λ git config --global user.email "abdullahmohammedredi@gmail.com" => these line is to change the email
+git config --global user.name "" => to leave it empty
+git config --global --unset user.name user.email=> to leave it empty
+you can change instead of --global ,another thing may be only in one repo
+λ git config -l --show-origin => b/c you might see duplicate entry in the list these line will bring their d/t origin b/c git bring the info from d/t sources
+to edit from editor : git config --global --edit 
+to change the color in the editor: 
+[color "status"]
+ added = yellow
+ changed = red bold
+ untracked = magenta bold
+[color "branch"]
+ remote = yellow
+=> to revert the change just remove what you made in VSC
+What are you doing is not related to only github, Public key is general but here we are doing for the github only.
+ssh-keygen => secure shell key generation
+ssh-keygen -t rsa -b 4096 -C "MMuja@gmail.com" => secure shell keygeneration  -type rsa(type of algorithm) 4096(bit) ,[By this we have created a public key to use instead of username & password (see lesson-08 to know more)]
+λ cat ~/.ssh/id_rsa.pub   => cat enable you to see the content of any file
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDCP5t63F6oC4z9rAvu/0zUJSnWOwnrjdeoSlwBGN2F2fiRSmpOB5r0Ur8/9CMdPwphbHxQszj51V9+qhxTWtH53sgTgjR7ch9UMFgwp+AgQNQTVNlJQYdn4a9w1ldVCyFl8nzX7nZO99qnSAkcvSwUQGNK97XzTcaoGzcOxEsVCJic6aS/k3kVzODxfLFSf2qP4G1Bg1JFFdI16Wa4iNloq0FILHRLftS9UHbY7HCQtLY7z3lGgQRJJUenWpU2w1KERwTEj2tCtfNq00l5NkOcrRSeRDCUl73wGGbMZqsZZ6zGNvePResy+rZqqnUz+35TvNFEqF8ehp4hKf0rSm8hw9MLIwrfawbhRIllDWiJwrwQX5f4Ns1Ux21zxjU4bzm2d2GB+O54NNc8eQRUERSUmrfGYIreWeqpZe1QuRcDcxGWFRpls1/vFHbIClAQ7TD8y7s+IHCrW89tLUqOjOvdr0vZq0MnbUw2FYCRmDRgvyM6CTOtl4ncYVEvGgIeYogd8fGADW+jRpGiiaRcUzzF5GS807i7j9WAyc5eJXNX8BDOW/AZ1jauDSonSM/RkB6tJFMEcltz1gqqghwVggYburi5FMhI13vq5d9AbrBooPboPlA6E2bNfMoFzuP4w1uB3SQTjDCJERhKo4xpuKCqUuDGTIJ1YzuJIQuT8p9Hfw== MMuja@gmail.com
+We have entered the above line to copy it and then add the  ssh in the setting of the github to create ssh and also gave it title (the unseen passcode is a protect for the key) (setting > ssh > add )
+C:\Users\ABDI\Downloads\My-Github2\Git_try (main -> origin)
+λ ssh -T git@github.com
+Enter passphrase for key 'C:\Users\ABDI/.ssh/id_rsa': ****
+Hi Abdullah-mujaa! You've successfully authenticated, but GitHub does not provide shell access.
+ssh -T git@github.com [we have used these to test the public key] and as we see above it authencal.. that means we are connected to the github successfully ,to disconnect delete the key in the setting of the github
+***We made a repo local (which initally we made it in the gui of github by checking the init (readme)) then we will add it to the remote (github) , we select ssh instead of http b/c it is w'h access our public key , We did git push -u (these "-u" which will first pull(if any other person made change in the remote repo b/c if to push without any conflict with the change others made) then push(your new change)
+C:\Users\ABDI\Documents
+λ md repositories
+C:\Users\ABDI\Documents
+λ cd repositories\
+C:\Users\ABDI\Documents\repositories
+λ git init
+Initialized empty Git repository in C:/Users/ABDI/Documents/repositories/.git/
+-----by the above we have made the 'repostiories' file a repo ------***actually there is a guide in the github when you created a repo locally and then make it local (see it b/c i did it from usama w'h is outdated)
+-------------git remote add origin git@github.com:Abdullah-mujaa/Course_try.git => by these we added the remote repo to the local 
+C:\Users\ABDI\Documents\repositories (master)
+λ touch index.html
+C:\Users\ABDI\Documents\repositories (master)
+λ git add index.html
+C:\Users\ABDI\Documents\repositories (master)
+λ git commit -m "Created the Main file"
+[master (root-commit) b0efd8a] Created the Main file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+C:\Users\ABDI\Documents\repositories (master)
+λ git remote add origin git@github.com:Abdullah-mujaa/Course_try.git
+C:\Users\ABDI\Documents\repositories (master)
+λ git push -u origin master
+Enter passphrase for key '/c/Users/ABDI/.ssh/id_rsa':
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 229 bytes | 45.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Abdullah-mujaa/Course_try.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+C:\Users\ABDI\Documents\repositories (master -> origin)
+λ
+the above method is good b/c you created a project and finally you made it a remote repo
+How to create a local repo then take to the remote => In the beginnig of the course we created a one remote then took the link and clone it then....but now we start from local to remote => after we created a folder then we git init then we create the project like the index.html then we track....git commit -m "Created the main file" then we go to github and create like any other repo but we didn't check the readme then a page appear we took the ssh => git remote add origin  git@github.com:Abdullah-mujaa/Course.git=> we are done then b/c the files people edit it and we add to the final we =>  git push -u origin master
+if a person what to work with us he will do git clone"the link" then he will have similar project update like us
+---lesson 10--- practical example of pull (in the Github GUI)
+pull => we first searched the project , took a fork , made the change ,then we  pull request ==> then in our github it became open , then the manager will see it and he will merge then the open become merged(now we can delete the fork in our github) , Our commit is in the remote repo
+second way is by another branch => when we edited the readme we checked the second option in the buttom and gave the branch a name then we made a pull request to the 'main' (our main(that we forked)) then accepted(by merging the new branch to the forked main branch) then we made a pull request of our main(forked) branch to the remote. and the manager will ......
+the above two way are usual unlike what we learned earlier that the manger make us a collaborater and we push whenever we like.
+There is a checkbox when u ask pull request (allow edits by maintainers) u need to check b/c the maintainer to edit anything needed before merging it.
+Alias=> e5tsar , made of two letter or one
+git config --global alias.st status => st is the e5tsar for status and we made it globally if the it is more than 1 word put it b/n double quote eg. "commit -m"
+git config --global alias.st => to show the content of the alias
+you can do the alias in VSC by git config --global --edit.
+Lesson 12: git br => list the available branchs
+git br scroll => created a branch by the name 'scroll'
+git checkout scroll => goes to the scroll branch 
+git branch scroll -d =>(this action is made while we are in another branch) these deletes the branch, d small is a safe delete b/c if there is changes(i think changes that are commited) in the branch w'h is not merged it doesn't delete unlike capital D.
+git checkout -b Dev-feature => we created Dev-feature branch and moved to it
+git branch -m Development => while we are in Dev-feature branch we renamed it by 'Development'
+there are two ways to send your changes that are in the branch u created:
+ I.merge the branch to the main then push the main brach:
+After you commit(after touch,add) in the branch=>  move to the main then do: git merge development(this is the branch we made the changes) then git push origin main and it is done (after you merge the branch to the main branch you can delete the branch (development).
+The result of push by the above "I" method is :
+λ git po master
+Enter passphrase for key '/c/Users/ABDI/.ssh/id_rsa':
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 259 bytes | 43.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Abdullah-mujaa/Course_try.git
+   52e9711..46ee9eb  master -> master
+***********II. After you commit(after touch,add) in the branch=> git push origin scroll(our branch) [these happens inside the scroll branch], 
+The result of push by the above "II" method is :
+C:\Users\ABDI\Documents\repositories (Scroll)
+λ git po Scroll
+Enter passphrase for key '/c/Users/ABDI/.ssh/id_rsa':
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 457 bytes | 41.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+remote:
+remote: Create a pull request for 'Scroll' on GitHub by visiting:
+remote:      https://github.com/Abdullah-mujaa/Course_try/pull/new/Scroll
+remote:
+To github.com:Abdullah-mujaa/Course_try.git
+ * [new branch]      Scroll -> Scroll
+===========> As you see above the before last two lines shows that you are asking for pull request , then we to github.com and we did pull request and then merging from scroll to main is confirmed and it is done
+lesson-13: + lesson-14
+Stash => me5ba2a , for example we add 2 files(so they are in the staging area) then we stash them so the system doesn't ask us to commit them even if we do "ls" they won't appear on the list so we can continue our work without any problem
+git stash => by these we stashed them
+git stash list => it shows '0' that means there are sth stashed, but if it shows nothing then there is no stash.
+ git stash save "Description Here" => Save Work To Stash With Description => then in stash list u will see it.
+git stash pop => these will get the files out of the stash 
+after we do git stash then we created another file then we git stash finally when we do 'git stash list' there are two stashs(me5bayen) by d/t number
+after we have multiple stashs=> we did git stash pop and it gave us out the last stash we made and the stash is deleted if you do git stash list you won't find it , but with 'git stash apply' the change(it can be a new file)  will go out but the stash(with the change inside) remain in its place
+git stash pop stash@{2} => these by the id it have in the list of stash if u don't do the id it will pop the last one
+git stash drop stash@{1} => these will delete the stash with the files inside it {be careful!}
+git stash show => these will show you what is inside the stash(as usual if without id , it will show u the last one) 
+git stash clear => this will delete all the stashs available( with the files inside)
+lesson-15:
+git restore --staged "File Name Here" => by these it will return unstaged
+you can do the stageing and unstageing in VSC : by "code new.txt" => in vsc do right click and click  stage ....
+To delete file (we made it in the untracked) do first 'git clean -n' these will list the file that will be deleted if any file u want to stay is there then to "git add" for it 
+git clean -f => will delete all the files that are untracked
+lesson-16: to delete a commit : in git there what so called the head(the pointer w'h point the last commit) so to delete the head(commit) you make a another commit the head so any commit w'h was aboove these new head will be deleted
+git reset --hard "Commit Hash Here" => every commit have its own hash (u can see it in github or by 'git log' in the cmd) so 9a7b the hash becomes the head
+after we reset we did 'git push origin main --force ' then refresh the git hub to see the change
+git log => Show Log File 
+git push origin main --force => Push Edits From Local To Remote With Force Flag
+Be careful in using reset b/c it will bye ur works
+lesson-17:
+touch .gitignore=> to ignore files from being asked untracked or .. we make the .gitignore file and in VSC we write our shru6:
+In VSC in the '.gitignore':
+*.log
+!vip.log
+node_packs/
+text.txt
+=> the above ignore any file with "log" extension excepts for 'vip.log'(! => not), ignores 'node_packs' folder and all what is inside it , ignore text.txt file.
+although the ignorefile you can do by force by : "git add -f text.txt"
+lesson-18:
+git tag => when you have different versions..,after we did the commitand push  when did git tag v1.0 then git po v1.0 and now you can see it in git hub these is lightweight: it takes the info from the commit (the message of the last commit)
+git tag => Show All Tags
+git tag "Version Name Or Tag Name Here" => Add New Lightweight Tag
+git tag -a "Version Name Or Tag Name Here" -m "Description Or Message" => Add New Annotated Tag , we did the same process as above on in the tag part we use these one (-a : anotated)
+git push origin "Tag Name Here" => Push Tag To Remote
+git tag : enables you to download on a specific part like a new version only.
+when do changes : the changes goes to all tags w'h is b/c we are using only one branch(#18 ,7:00)
+ i encountered  that in v1.0 ,when i download the zip file it had the files except the one we created after we did the v1.0 and they were found in the v2.0 (including the one in the v1.0)  
+lesson-19:
+git tag -l "v1.*" :List All Tags Starting With v1.
+git tag -d "Version Name Or Tag Name Here" => Delete Tag , w'h is available in the local (w'h is necessary b/c we made it locally then pushed it to remote so although you deleted the remote tag u need to delete the local one)
+git push origin --delete "Version Name Or Tag Name Here" => Delete Tag From Remote , by these we delete tags that are in the remote (u can delete it by GUI)
+in addition in this course we did releas for the tag(publish) although you can draft a release and finally we deleted the release and the tag .....
+
+
