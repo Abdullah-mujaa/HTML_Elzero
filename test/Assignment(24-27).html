@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment(24-27)</title>
+</head>
+<body>
+  <!-- Assign-01  -->
+  <form action="test.py" method="post">
+    <label for="username">Username</label><br>
+    <input type="text" id="username" name="username" required placeholder="Enter Username"><hr>
+    <label for="password">Password</label><br>
+    <input type="password" id="password" name="password" placeholder="Enter password"><hr>
+    <label for="number">Mobile</label><br>
+    <input type="number" id="number" name="number" placeholder="+123 (234) 20100"> <hr>
+    <label for="email">Email</label><br>
+    <input type="email" id="email" name="email" required placeholder="Enter Email" ><hr>
+    <label for="text">Subject</label><br>
+    <textarea name="text" id="text" placeholder="Enter Subject"></textarea> <hr>
+    <!-- Query string : username: gfb 
+password: gf bbf
+number: 
+email: abdullahmohammedredi@gmail.com
+text: 
+My_num: 0909268898
+Range: 400 -->
+    <input type="hidden" name="My_num" value="0909268898"><br>
+    <input type="submit" value="Send Data">
+    <input type="reset" value="Empty Form">
+  </form>
+  <hr>
+  <!-- Assign-02  -->
+  <input type="range" value="400" min="0" max="1000" step="100" name="Range">
+</body>
+</html>

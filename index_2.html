@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Book Store_2</title>
+</head>
+<body>
+  <!-- 
+    thead => table head
+    tbody
+    tfoot => table foot
+    *The advantage of using the above three is that the order is protected even if in coding not protected
+    tr => table row
+    td => table data cell
+    th => table head cell (centered and bold) + useful for SEO
+    <table border="1"cellpadding="10px" >
+      caption => title of the table
+      colspan for merge columns and rowspan for row
+    cellspacing= "0" => to make a normal border
+   -->
+    <table border="1">
+    <caption>Students Marks</caption>
+    <thead>
+      <tr>
+        <th>First</th>
+        <th>Last</th>
+        <th>Marks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Abdullah</td>
+        <td>Mohammed</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>Abdullah</td>
+        <td>Mohammed</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>Abdullah</td>
+        <td>Mohammed</td>
+        <td>90</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2">Total</td>
+        <td>500</td>
+      </tr>
+    </tfoot>     
+    </table>
+  <!-- 
+    span => is an inline (so no effect) , it is used to edit the content b/n the span separately
+    br => break , goes to the next line , it can be used inside a single cell of table(watch test4) , also used as margin-bottom
+    hr=> horizontal rule, a line (it can be edited) , it can be used inside a single cell of table(watch test4)
+   -->
+    <div>
+      <h1>Book Store</h1>
+      <p> This is <span>My </span> <b>Book Store</b>, Welcome</p>
+    </div>
+    <p>This Is Second Paragraph, <br /> test <br />Text Again</p>
+    <hr/>
+    <p>Second paragraph</p>
+    <!-- 
+      div => divison, used to contain other elements(not only one but mor), it is a mistake to use div to put text inside it rather use p for that
+     -->
+      <div class="romantic">
+        <div class="book">
+          <h3>Book Title</h3>
+          <p>Book Description</p>
+          <span>$100</span> <!--this is good idea putting the second div for you to edit only this book information as one-->
+        </div>
+        <div>
+          <h3>Book Title</h3>
+          <p>Book Description</p>
+          <span>$100</span>
+        </div>
+        <div>
+          <h3>Book Title</h3>
+          <p>Book Description</p>
+          <span>$100</span>
+        </div>
+      </div>
+
+<hr>      
+      <div class="police">
+        <div>
+          <h3>Book Title</h3>
+          <p>Book Description</p>
+          <span>$100</span>
+        </div>
+        <div>
+          <h3>Book Title</h3>
+          <p>Book Description</p>
+          <span>$100</span>
+        </div>
+        <div>
+          <h3>Book Title</h3>
+          <p>Book Description</p>
+          <span>$100</span>
+        </div>
+      </div>
+<hr>      
+      <div class="fantasy">
+        <div>
+          <h3>Book Title</h3>
+          <p>Book Description</p>
+          <span>$100</span>
+        </div>
+        <div>
+          <h3>Book Title</h3>
+          <p>Book Description</p>
+          <span>$100</span>
+        </div>
+        <div>
+          <h3>Book Title</h3>
+          <p>Book Description</p>
+          <span>$100</span>
+        </div>
+      </div>
+      <!--  
+        entities => to display character w'h otherwise impossible see the eg below
+        entities live inside '&' and ';'
+       -->
+      <!-- <div>This is my <p>  Div</div> -->
+      <div>This is my &lt;p&gt; Div </div>
+      <!-- 
+        semantic elements => they are self defining elements , they are exactly like div and the difference is the name
+        there is a picture showing the difference
+        header, footer , nav , aside , section , article
+        SEO focus more in the article than footer and header
+        Add: div class ="wrapper" is used to contain all elements
+        figure and figcaption
+            All are block elements
+       -->
+        <header>Book Store</header>
+        <nav>one--two--three</nav>
+        <section>
+          <article>It is a book store</article>
+          <aside>1 -- 2-- 3</aside>
+        </section>
+        <footer>Buy it</footer>
+      <hr>
+      <!-- 
+        layout with div and classes 
+        the rest will be made by CSS
+      -->
+      <div class="header">
+        <h2>Logo</h2>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Services</li>
+          <li>Contact Us</li>
+        </ul>
+      </div>
+      <hr>
+      <ul class="navigation"> <!--We didn't use div b/c it is only one element i.e ul-->
+        <li>Links</li> <!--with CSS they sit side by side-->
+        <li>Links</li>
+        <li>Links</li>
+        <li>Links</li>
+        <li>Links</li>
+      </ul>
+      <hr>
+      <div class="content"> <!--these will be to the left-->
+        <img src="images/hardest-programming-language.png" alt="">
+      </div>
+      <div class="Sidebar"> <!--to the right-->
+        Sidebar
+      </div>
+      <hr>
+      <div class="footer">
+        Footer
+      </div>
+      <!-- layout with Semantics  -->
+      <header class=""> <!--we give cls b/c there can more header like a header for a section(inside it )-->
+        <h2>Logo</h2>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Services</li>
+          <li>Contact Us</li>
+        </ul>
+      </header>
+      <hr>
+      <nav> <!--We don't give class b/c there can't be more than one nav in a website-->
+        <li>Links</li> 
+        <li>Links</li>
+        <li>Links</li>
+        <li>Links</li>
+        <li>Links</li>
+      </nav> 
+      <hr>
+      <section class=""> 
+        <figure> <!--earlier it was by div-->
+          <img src="images/hardest-programming-language.png" alt=""> 
+          <figcaption>Caption of the Image</figcaption>
+        </figure>
+        
+      </section>
+      <article>
+
+      </article>
+      <aside> <!--No class-->
+        Sidebar
+      </aside>
+      <hr>
+      <footer class="">
+        Footer
+      </footer>
+      <!-- 
+        you can use "src" attribute inside audio element but using source element is better b/c if the browser
+        don't support the one it goes to the other.
+        control is for the buttons and without it nothing have appeared
+        autoplay => Once the page load the audio plays,some browsers don't support it
+        loop=> when it end it starts again
+        muted => initially it is silent
+        preload suggests(not force) the browser to either preload or preload="none" or preload="metadata" and this
+          all is if autoplay is not enabled, and the default of preload differs b/n browsers
+       -->
+      <audio controls autopla loop muted>
+        <source src="media/Hazaa_Al-fatiha.mp3" type="audio/mpeg"> <!--the type here is media type(type/subtype) and all browsers read mp3 so it is enought-->
+        <source src="media/Hazaa_Al-fatiha.ogg" type="audio/ogg">
+        <source src="media/Hazaa_Al-fatiha.wav" type="audio/wav">
+        Your Browser Does Not Support Audio Tags <!--This will appear only if the browser don't support audio tag-->
+      </audio>
+        <!-- 
+          Video => All the things said in audio applies here too
+          poster => this is a picture that will appear until the video starts
+                    (b/c this video is in the device it won't take time)
+          track is a document for description or.... for those with impairment  
+          label is the word that appears in the controls of the video 
+          preload suggests(not force) the browser to either preload or preload="none" or preload="metadata" and this
+          all is if autoplay is not enabled, and the default of preload differs b/n browsers
+        -->
+      <video controls width="600" height="400" preload="none"  loop muted poster="images/selwat.png" >
+        <source src="media/Al-Jumaa.mp4" type="video/mp4">
+        <source>
+        <source>
+        Your Browser Does Not Support Video Tags
+        <track src="my_file_en.vtt" kind="subtitles" srclang="en" label="English"><!--ترجمة-->
+        <track src="my_file_it.vtt" kind="subtitles" srclang="it" label="Italian">
+      </video>
+      <!--
+        Form input
+        input=> inline
+        type => is it text/password/email.....
+        label => literally like supermarket(what is inside the pack/box) 
+        Everything related to the form should be inside the form element
+        required => goes from up to down(There default order when you hover)
+        placeholder => literally
+        value(in input) => for text is useful for eg. when changing your old profile Name or email
+                            for submit is the text in submit button
+        action => is action="Muja.php" , it is the receiver(it can be an email), if these value is empty then it will be send to the same 
+        page we are in (you can see in devtool>network>payload how the data are organized)
+        method => get => the data entered will be explicit in the url above
+                  post => the data is implicit
+        name + value is for the server , type is what is displayed
+        hidden is sent with the form along with its value (you can see it in the devtool on the html structure) but it is  not necessary for the user to see it
+        reset => delete the whole form
+        color => It will be sent by hex color
+        range => min => minimum value and max is the maximum
+        step => the default is  1,2,3...100 by setting step you can jump
+        value in range input is the starting point (the default is half way which will take it if not set)
+        Range is made better by Javascript
+        Number input have similar attributes like the range and it doesn't accept anything writter otherthan number (any number above or below will not be sent until set right)
+      -->
+      <form method="get">
+        <div>
+          <label >Username</label>
+          <input type="text" required placeholder="Username" name="un">
+        </div>
+        <br> <!--We made a margin b/n elements without Css-->
+        <div>
+          <label>Password</label>
+          <input type="password" required placeholder="Write a complex password" name="pass">          
+        </div>
+        <br>
+        <div>
+          <label >Email</label>
+          <input type="email" required placeholder="Enter your Email" value="Muja@gmail.com" name="mail">          
+        </div>
+        <input type="hidden" value="kfjkjkjjjjjjdkkkjkjkjkjkjkj">
+        <br>
+        <div>
+          <label >Color</label>
+          <input type="color" name="color">          
+        </div>
+        <br>
+        <div>
+          <label >Range</label>
+          <input type="range" name="range" min="0" max="100" step="20" value="80">          
+        </div>
+        <br>
+        <div>
+          <label >Number</label>
+          <input type="number" name="number" min="10" max="100" step="10" value="80">          
+        </div>
+        <br>
+        <input type="reset" value="reset it">
+        <input type="submit" value="Save">
+      </form>
+</body>
+</html>

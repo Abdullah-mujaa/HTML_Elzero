@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="This Is Our Book Store">
+  <title>Book Store</title>
+</head>
+<body>
+  <!-- 
+    with button rather than div in send and reset one can move by tab
+    for accessibility(impairment related) go => f12 => lighthouse => check accessibility
+    <html lang="en"> => important for screen readers and SEO
+   -->
+  <!-- <form action="">
+    <label for="Username">Username</label>
+    <input type="text" name="Username" id="Username">
+    <button>Send</button>
+    <button>Reset</button>
+  </form> -->
+  <!-- 
+    ARIA => accessible reach internet application
+    for more infn in accessibility https://web.dev/learn/accessibility/
+    by dev tool we tested contrast
+    aria => allows to add information which is useful for screen reader
+    role => changes a neutral to the value given , aria-checked = false , tabindex(to go by tab)
+  -->
+  <h1>Cook Title</h1>
+
+  <h3>Chapter One</h3>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et libero ab exercitationem debitis explicabo adipisci architecto placeat nihil nesciunt iure ipsa perferendis, voluptatum similique est. Quas veritatis voluptatem error recusandae?
+  </p>
+  <div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias aspernatur temporibus, libero consequatur, vel nesciunt expedita est odit incidunt modi quod deserunt accusamus asperiores illo inventore assumenda? Ducimus, incidunt atque.
+  </div>
+  <h2>Inside Chapter One</h2>
+  <form method="get">
+    <label for="skill1">Skill One</label>
+    <input id="skill1" type="checkbox" checked>
+    <label for="skill2">Skill Two</label>
+    <input id="skill2" type="checkbox">
+    <hr>
+    <div role="checkbox"aria-checked="true" tabindex="0" aria-labelledby="plan1" name="X" >Plan One</div>
+    <label for="plan1">Plan One Label</label>
+    <div role="checkbox" tabindex="0" aria-labelledby="" name="X">Plan Two</div>
+    <div role="checkbox" tabindex="0" aria-labelledby="" name="X">Plan Three</div>
+    <input type="submit">
+  </form>
+</body>
+</html>

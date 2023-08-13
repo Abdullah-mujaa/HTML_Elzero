@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html> <!-- Any element when it is child it goes a step forward(tab)and to step back use(shift+tab) -->
+
+<head> <!-- browsers take info from the meta in the head part -->
+  <meta charset="UTF-8" />
+  <!--self-closing_tag, character_set is a part which talks about the content of your page and UTF allows all languages and their alphabets like arabic -->
+  <title>Book Store</title> <!-- title and meta description will appear when searched in browser -->
+  <meta 
+  name='description'
+  content="This is our Book store" />
+  <!-- meta is communication b/n the browser and the page --> <!--this is a great way to organize your attributes-->
+  <meta 
+  name="copyright"
+  content="Muja Tech company"/>
+  <meta name="author" content="abdullah mohammed">
+  <meta name="revised" content="Monday , February 20th, 2023, 9:30 am ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <!-- h1 - h6 -->
+  <h1>Book Store</h1> <!--In the developer tool unlike the next line this element have many 
+    default style by "user agent(w'h is in chrome)", you can only have one in a page,SEO give attention to it-->
+
+  <h2>Chapter Title Inside Book</h2><!--there must be hierarchy h1 then h2 then h3...-->
+
+  <h3>Story Title Inside Chapter</h3> <!--after these we have paragrapgh-->
+  <h4>Book store</h4> <!--these is heading 4-->
+  <h5>Book store</h5>
+  <!-- below is an eg. of white space collapse -->
+  <h6>Book
+
+    store</h6>
+  This is my book store, Welcome <!--the default is inline-->
+  <p>We have A Big Sale</p> <!--if we didn't use <p> this line wouldn't be in another line(so to separate it in a new line)
+        logically a paragraph will not let another thing to go beside it (it is block) and also there will be 
+        a space between it and another elements so it have margin you can see dev tool --> 
+  <p hidden>We have A Big Sale</p> <!--attribute = talks more about the content of the element-->
+  <p>We have A Big Sale</p>
+  <!-- 
+          formatting elements
+          b => Bold (عريض)
+          strong => Bold => Important text (+ useful in SEO)
+          i => italic 
+          em => empasized => Important text 
+          mark => market or hightlighted text
+          u => Underline
+          small => Smaller text (this is used for copyright or note or ....)
+          del => deleted text (the user can know you have changed for eg. price, also important for SEO for they to trust you)
+          ins => inserted text ( like deleted but this one show something added not deletd)
+          sub => subscript
+          sup => superscript
+          "This elements can be ignored by using css but just for....."
+        -->
+  <p>This is My <b>Book Store</b> , Welcome</p>
+  <p>This is My <strong>Book Store</strong> , Welcome</p>
+  <p>This is My <i>Book Store</i> , Welcome</p>
+  <p>This is My <em>Book Store</em> , Welcome</p>
+  <p>This is My <mark>Book Store</mark> , Welcome</p>
+  <p>This is My <u>Book Store</u> , Welcome</p>
+  <p>This is My <small>Book Store</small> , Welcome</p>
+  <p>This is My <del>Book Store</del>Toy Store , Welcome</p>
+  <p> <del>$100</del> <ins>$80</ins> </p> <!-- to show the customer the discount-->
+  <p>H <sub>2</sub> 0</p>
+  <p>X <sup>2</sup></p>
+
+  <!-- how to create a link 
+          href => hypertext reference
+          target = _blank , makes it open in new tab and it is not the default so it is important to include it for user to return
+          title => the text will appear when you hover around , it is very useful
+          3 destinations => another site (google.come) , another page in the same site(test.html), another part of the same page(#Osama)
+          mailto:email.com => allow you to go directly to email
+         -->
+  <a href="http://google.com" target="_blank" title="go to google">Google</a>
+  <a href="http://Facebook.com " title="this is a Facebook link">Facebook</a>
+  <a href="test.html" title="go to test" target="_blank">Test</a>
+  <a href="#Osama" title="go to Osama">Osama</a>
+  <a href="https://elzero.org/#menu-navbar" title="go to nesiha" target="_blank">Nesiha</a> <!--didn't work-->
+  <a href="mailto:muja@gmail.com">Contact me</a>
+  <!-- 
+          src => can be a link or in the same place or forward or backward
+          alt => appears only when the image don't load 
+          width and height can be used but it is not preferred
+         -->
+  <img src="https://elzero.org/wp-content/uploads/2022/09/hardest-programming-language.png" alt="" width="200px"
+    height="200px">
+  <img src="images/hardest-programming-language.png" alt="will not show">
+  <img src="../good-pc-to-learn-programming.png" alt="">
+  <img src="missing-image.png" alt="Logo Testing">
+  <!-- 
+          ul => unordered list
+          li => list item
+        -->
+  <ul>
+    <li>Html</li>
+    <li>Css</li>
+    <li>
+      Js
+      <ul>
+        <li>Angular</li>
+        <li>ReactJs</li>
+        <li>VueJs</li>
+      </ul>
+    </li>
+  </ul>
+  <!-- Separator -->
+  <!-- 
+          ol => ordered list (ترتيب)
+          reversed => Reverse the ordering(it doesn't mean opposite the initial order but go descending instead of ascendeing (watch test 3))
+          start => start from position e.g start="101"/3 to start from "c"(this attribute can have only integer value)
+          type => type of ordering (I,i,A,a)
+          *the above three where attributes to the "ol" the is for the li but same result
+          value="50"
+         -->
+  <ol>
+    <li value="50">Name</li>
+    <li>Address</li>
+    <li>Id</li>
+  </ol>
+  <!-- Separator -->
+  <!-- 
+          dl => Description list
+          dt => Term
+          dd => Description of the Term
+         -->
+  <dl>
+    <dt>HTML</dt>
+    <dd>Lang of the Web</dd>
+    <dd>the first Lang</dd>
+    <dt>CSS</dt>
+    <dd>lang of the visuals</dd>
+  </dl>
+</body>
+
+</html>

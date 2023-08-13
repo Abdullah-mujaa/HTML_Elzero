@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Store_3</title>
+</head>
+
+<body>
+  <!--
+        Form input 
+        name is necessary
+        input , label=> inline
+        type => is it text/password/email.....
+        label => literally like supermarket(what is inside the pack/box) 
+        Everything related to the form should be inside the form element
+        required => goes from up to down (also at hover it say please....)
+        placeholder => literally
+        value(in input) => for text is useful for eg. when changing your old profile Name or email
+                            for submit is the text in submit button
+        action => is action="Muja.php" , it is the receiver(it can be an email), if these value is empty then
+                  it will be send to the same 
+        page we are in (you can see in devtool>network>payload how the data are organized)
+        method => get => the data entered will be explicit in the url above
+                  post => the data is implicit
+        name + value is for the server , type is what is displayed
+        hidden is sent with the form along with its value (you can see it in the devtool on the html structure) 
+                but it is  not necessary for the user to see it
+        reset => delete the whole form
+        color => It will be sent by hex color
+        range => min => minimum value and max is the maximum
+        step => the default is  1,2,3...100 by setting step you can jump
+        value in range input is the starting point (the default is half way which will take it if not set)
+        Range is made better by Javascript
+        Number input have similar attributes like the range and it doesn't accept anything writter otherthan
+              number (any number above or below will not be sent until set right)
+        Readonly attribute => you put a value and the user can't edit it (it is sent along with the others)
+        disabled => similar to readonly but it is not sent (in both you can copy the value)
+        autofocus => makes the users start from it
+        minlength and maxlength => you can't less or more
+        radio and checkbox are before the label
+        label for username => easily semantic (by touch it you can do it)
+        radio = one choice(and once choosed you must choose one of the choice availabel) , 
+        checkbox = multiple ( for both there is checked attribute)
+        To make sure user choice from radio inputs use checked on one and
+              in checkbox use required in the input you want
+        optgroup to group related options
+        multiple in select => ctrl+ click
+        Use selected in select in option => especially if the user before this have selected a habit
+        select is better than checkbox and radio in that you don't have to list them all in the page
+        textarea => the size of the box can be edited by the user
+                    the col and row are replace by height and width in CSS
+                    maxlength and max width .....
+        no validate(will send the form even if empty), target =_blank is similar to the old
+            (the two are good for trial)                    
+        input => file(every browser d/t set but web developers use CSS method) , search(x button avaiable), url (don't receive except url)
+        date, month, time => semantics
+        To set default value => <input type="month"value="1982-10"> 
+        input list => (there is no type)it  is connected by list to id of datalist(the advantage
+            over 'select' is you can search),option here is empty element
+      -->
+  <form method="get" novalidate target="_blank">
+    <div>
+      <label>Username</label>
+      <input type="text" required placeholder="Username" name="un" value="Abdullah" readonly>
+    </div>
+    <br> <!--We made a margin b/n elements without Css -->
+    <div>
+      <div>
+        <label>Subject</label>
+        <input type="text" name="Subject" autofocus>
+      </div>
+      <br>
+      <label>Password</label>
+      <input type="password" required placeholder="Write a complex password" name="pass" minlength="10" maxlength="20">
+    </div>
+    <br>
+    <div>
+      <label>Email</label>
+      <input type="email" required placeholder="Enter your Email" value="Muja@gmail.com" name="mail" disabled>
+    </div>
+    <input type="hidden" value="kfjkjkjjjjjjdkkkjkjkjkjkjkj">
+    <br>
+    <div>
+      <label>Color</label>
+      <input type="color" name="color">
+    </div>
+    <br>
+    <div>
+      <label>Range</label>
+      <input type="range" name="range" min="0" max="100" step="20" value="80">
+    </div>
+    <br>
+    <div>
+      <label for="num">Number</label>
+      <input type="number" name="number" id="num" min="10" max="100" step="10" value="80">
+    </div>
+    <hr>
+    <div>
+      <input type="radio" name="os" value="Windows" id="win" checked required>
+      <label for="win">Windows</label>
+    </div>
+    <div>
+      <input type="radio" name="os" value="Linux" id="lin">
+      <label for="lin">Linux</label>
+    </div>
+    <div>
+      <input type="radio" name="os" value="Mac" id="mac">
+      <label for="mac">Mac</label>
+    </div>
+    <hr>
+    <div>
+      <input type="checkbox" name="os" value="Windows" id="win1" checked required>
+      <label for="win1">Windows</label>
+    </div>
+    <div>
+      <input type="checkbox" name="os" value="Linux" id="lin1">
+      <label for="lin1">Linux</label>
+    </div>
+    <div>
+      <input type="checkbox" name="os" value="Mac" id="mac1">
+      <label for="mac1">Mac</label>
+    </div>
+
+    <label for="book">Choose Book</label>
+    <select name="book" id="book" multiple>
+      <optgroup label="Romantic books">
+        <option value="B1">Book1</option>
+        <option value="B2">Book2</option>
+        <option value="B3">Book3</option>
+      </optgroup>
+      <optgroup label="Police books">
+        <option value="B4">Book4</option>
+        <option value="B5" selected>Book5</option>
+        <option value="B6">Book6</option>
+      </optgroup>
+    </select>
+    <hr>
+    <textarea name="Subject" id="" cols="30" rows="10" placeholder="text">My name is...</textarea>
+    <hr>
+    <label for="file">Upload</label>
+    <input type="file" id="file">
+    <hr>
+    <hr>
+    <label for="search">Search</label>
+    <input type="search" id="search">
+    <hr>
+    <hr>
+    <label for="url">Url</label>
+    <input type="url" id="url">
+    <hr>
+    <hr>
+    <label for="Date">Date</label>
+    <input type="Date" id="Date" max="2021-10-31" min="2001-01-25">
+    <hr>
+    <hr>
+    <label for="Month">Month</label>
+    <input type="Month" id="Month">
+    <hr>
+    <hr>
+    <label for="Time">Time</label>
+    <input type="Time" id="Time">
+    <input list="programming" name="prog">
+    <datalist id="programming">
+      <option value="Python">
+      <option value="C++">
+      <option value="C#">
+      <option value="php">
+      <option value="Javascript">
+    </datalist>
+    <hr>
+    <input type="reset" value="reset it">
+    <input type="submit" value="Save">
+  </form>
+  <!-- 
+    q => quotation
+    blockquote => same as q but block (there's margins)
+    button => is button for action (e.g go to a page or...) , Now more used with Js
+    wbr=>(The <wbr> (Word Break Opportunity) tag specifies where in a text it would be ok to add a line-break
+        Tip: When a word is too long, the browser might break it at the wrong place. You can use the <wbr> element
+          to add word break opportunities)
+    bdi=> bidirectional isolate(يعزل المحتوى عن اتجاه الصفحة)( words are either RTL/LTR, 
+    so when the two come together you should use bdi b/c weak characters like (-,_,1,2..) 
+    are changed to the preceeding(MDL refer))
+    code=> computer code
+    pre => pre formated text (respect space and new line), good for code , .... 
+    iframe => some pages refuse to iframe them(there a better thing to do like this i.e API)
+  -->
+  <br>
+  <q>This Is Wise Word</q>
+  <blockquote>This Is Wise Word</blockquote>
+  <button>Click</button> <wbr/>
+  <div>
+    https://www.google.com/<wbr/> search?q=elzero+html&oq=elzero+html+&aqs=chrome..<wbr/>69i57j69i64j69i60l3.6997j0j7&sourceid=chrome&ie=UTF-8
+  </div>
+  <p>Welcome السلام 2</p>
+  <p><bdi>السلام</bdi> 2 Welcome</p>
+  <p>Muja 1 first</p>
+  <p> jukml</p>
+  <code>
+    var x = 10;
+    var y = 20;
+    console.log(x+y);
+  </code>
+  <p>
+    This Is
+    P
+    New Line
+    New Line
+  </p>
+  <pre>
+    This Is 
+    P 
+    New Line
+    New Line
+  </pre>
+  <pre>
+    <code>
+      var x = 10;
+      var y = 20;
+      console.log(x+y);
+    </code>
+  </pre>
+  <iframe src="https://elzero.org/" width="800" height="400" </iframe>
+</body>
+
+</html>
